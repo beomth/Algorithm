@@ -4,7 +4,7 @@
 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=beomth)](https://solved.ac/beomth)
 <br>
 [![Solved.ac
-프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=beomth)](https://solved.ac/beomth)
+Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=beomth)](https://solved.ac/beomth)
 
 <img src="https://img.shields.io/badge/Java-437291?style=flat&logo=OpenJDK&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat&logo=Spring Boot&logoColor=white"/>
 
