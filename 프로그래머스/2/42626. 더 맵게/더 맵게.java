@@ -13,7 +13,7 @@ class Solution {
             if(q.size() == 1){
                 return - 1;
             }
-            q.add(q.poll() + q.poll() * 2);
+            q.add(q.remove() + q.remove() * 2);
             answer++;
         }
         
