@@ -5,12 +5,12 @@ class Solution {
         int answer = 0;
         Arrays.sort(citations);
         
-        // 우측 값 = 기준값(citations[i])
         for(int i = 0; i < citations.length; i++) {
-            int h = citations.length - i;
-            
-            if(citations[i] >= h) {
-                answer = h;
+            int smaller = Math.min(citations[i], citations.length - i);
+            if(smaller >= answer) {
+                answer = Math.max(answer, smaller);
+            }
+            else{
                 break;
             }
         }
