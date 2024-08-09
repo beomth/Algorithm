@@ -45,7 +45,6 @@ public class Main {
             }
         }
 
-
         //3.출력
         bw.write(String.valueOf(answer));
         br.close();
