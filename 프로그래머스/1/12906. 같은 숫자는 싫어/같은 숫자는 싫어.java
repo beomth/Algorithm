@@ -2,31 +2,24 @@ import java.util.*;
 
 public class Solution {
     public int[] solution(int []arr) {
+        Queue<Integer> q = new LinkedList<>();
+        List<Integer> list = new LinkedList<>();
+        q.add(arr[0]);
         int index = 0;
         
-        ArrayList<Integer> list = new ArrayList<>();
-        Stack<Integer> stack = new Stack<>();
-        stack.push(arr[index]);
-        index++;
-
-        for(int i = 0; i < arr.length; i++) {
-            if(stack.isEmpty()) {
-                stack.push(arr[i]);
-            }
+        for(int i = 1; i < arr.length; i++) {
+            //while없이
+            if(q.peek() == arr[i])  continue;   
             else {
-                if(stack.peek() == arr[i]) {
-                    continue;
-                }
-                else {
-                    list.add(stack.pop());
-                    stack.push(arr[i]);
-                }
+                list.add(q.poll());
+                q.add(arr[i]);
             }
         }
         
-        if(!stack.isEmpty()){
-            list.add(stack.pop());
+        while(!q.isEmpty()) {
+            list.add(q.poll());
         }
+        
         return list.stream().mapToInt(Integer::intValue).toArray();
     }
 }
